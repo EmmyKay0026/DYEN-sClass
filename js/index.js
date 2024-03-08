@@ -16,7 +16,7 @@ let dyenAge = 3;
 
 // console.log(age + (friendAge + dyenAge));
 
-let userName = prompt();
+const userName = prompt();
 
 console.log("Hello " + userName, " thank you for visiting");
 
