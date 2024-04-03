@@ -163,7 +163,9 @@ img {
   white-space: nowrap;
   align-items: center;
 }
-
+.bulb-img {
+  width: 40%;
+}
 @media screen and (min-width: 768px) {
   .text-container {
     padding: 0 80px;
