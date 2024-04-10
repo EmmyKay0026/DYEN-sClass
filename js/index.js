@@ -1,30 +1,19 @@
-const bulbImg = document.getElementById("bulb-img");
-const turnOn = document.getElementById("turn-on");
-const turnOff = document.getElementById("turn-off");
-const bulbStatus = document.getElementById("bulb-status");
+const getUser = async () => {
+  // console.log("I have ordered from table 3");
+  try {
+    const response = await fetch("https://fakestoreapi.com/users");
+    // console.log(response);
 
-turnOn.addEventListener("click", () => {
-  bulbImg.src = "../assets/onbulb.jpg";
-  bulbStatus.innerHTML = `
-  <span>To turn off the bulb, click the "Turn off button"</span>
-  `;
-  // bulbStatus.innerText = "The bulb is on.";
+    const users = await response.json();
+    console.log(users[1]);
+  } catch (error) {
+    console.log("An error ocurred:", error);
+  }
 
-  // console.log(bulbImg.src);
-  console.log("the bulb is on");
-});
+  // console.log("Function");
+};
+// console.log("I am from table 4");
 
-turnOff.addEventListener("click", () => {
-  bulbImg.src = "../assets/goodbulb.jpg";
-  bulbStatus.innerHTML = "The bulb is off.";
-
-  console.log("the bulb is off");
-});
-
-// const applyBtn = document.getElementById("apply-btn");
-
-// // console.log(applyBtn);
-
-// applyBtn.addEventListener("click", () => {
-//   console.log("Apply button was clicked");
-// });
+getUser();
+// jnsdjbnviadbnvndvn More Code
+// /next
